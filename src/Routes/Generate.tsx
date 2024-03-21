@@ -84,7 +84,7 @@ function Generate() {
     <>
       <Background src={bg}>
         <>
-          <Link to="/">
+          <Link to="/Prompirit">
             <GoHome></GoHome>
           </Link>
           <EnterContainer ref={enterContainerRef} style={{ height }}>

@@ -78,7 +78,7 @@ function Popup({ onClose }: PopupProps) {
   const handleButtonClick = () => {
     // 1700ms 후에 "/generate"로 이동
     setTimeout(() => {
-      navigate("/generating");
+      navigate("/Prompirit/generating");
     }, 900);
   };
 

@@ -48,7 +48,7 @@ function Generating() {
   useEffect(() => {
     // 1500ms 후에 "/generate"로 이동
     const timer = setTimeout(() => {
-      navigate("/generate");
+      navigate("/Prompirit/generate");
     }, 1700);
 
     // 컴포넌트가 unmount될 때 clearTimeout 호출하여 메모리 누수 방지
@@ -75,7 +75,7 @@ function Generating() {
     <>
       <Background src={bg}>
         <>
-          <Link to="/">
+          <Link to="/Prompirit">
             <GoHome></GoHome>
           </Link>
           <EnterContainer ref={enterContainerRef} style={{ height }}>

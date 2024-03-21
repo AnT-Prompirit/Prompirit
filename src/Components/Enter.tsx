@@ -119,7 +119,7 @@ function Enter({
           backgroundColor={color}
           enterButtonWidth={enterButtonWidth}
         >
-          <Link to="/generating">
+          <Link to="/Prompirit/generating">
             <span>Generate</span>
           </Link>
         </EnterButton>
