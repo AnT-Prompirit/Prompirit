@@ -34,7 +34,15 @@ function Home() {
     <>
       <Background src={bg}>
         <EnterContainer ref={enterContainerRef} style={{ height }}>
-          <Enter color="black"></Enter>
+          <Enter
+            color="black"
+            width={38}
+            top={61}
+            enterPromptWidth={73}
+            enterButtonWidth={24.5}
+            enterMicWidth={3.5}
+            enterPromptPadding={9}
+          ></Enter>
         </EnterContainer>
       </Background>
     </>

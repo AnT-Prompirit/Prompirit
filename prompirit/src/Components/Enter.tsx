@@ -4,13 +4,19 @@ import { Link } from "react-router-dom";
 
 type EnterProps = {
   color: string;
+  width: number;
+  top: number;
+  enterPromptWidth: number;
+  enterButtonWidth: number;
+  enterMicWidth: number;
+  enterPromptPadding: number;
 };
 
-const EnterBox = styled.div`
+const EnterBox = styled.div<{ enterBoxWidth: number; enterBoxTop: number }>`
   position: absolute;
-  width: 38%;
+  width: ${(props) => props.enterBoxWidth}%;
   height: 8.5%;
-  top: 61%;
+  top: ${(props) => props.enterBoxTop}%;
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -28,13 +34,16 @@ const EnterBox = styled.div`
   }
 `;
 
-const EnterPrompt = styled.input`
+const EnterPrompt = styled.input<{
+  enterPromptWidth: number;
+  enterPromptPadding: number;
+}>`
   height: 100%;
-  width: 73%;
+  width: ${(props) => props.enterPromptWidth}%;
   border: 1px solid;
   border-color: ${(props) => props.theme.lightGray};
   border-radius: 90px;
-  padding: 15px 15px 15px 8%;
+  padding: 15px 15px 15px ${(props) => props.enterPromptPadding}%;
   @media (min-width: 500px) {
     font-size: 10px;
   }
@@ -47,10 +56,10 @@ const EnterPrompt = styled.input`
   position: relative;
 `;
 
-const EnterMic = styled.button`
+const EnterMic = styled.button<{ enterMicWidth: number }>`
   position: absolute;
-  left: 3%;
-  width: 3%;
+  left: ${(props) => props.enterMicWidth}%;
+  width: ${(props) => props.enterMicWidth}%;
   height: 40%;
   z-index: 1;
   img {
@@ -59,9 +68,12 @@ const EnterMic = styled.button`
   }
 `;
 
-const EnterButton = styled.div<{ backgroundColor: string }>`
+const EnterButton = styled.div<{
+  enterButtonWidth: number;
+  backgroundColor: string;
+}>`
   height: 100%;
-  width: 24.5%;
+  width: ${(props) => props.enterButtonWidth}%;
   border-radius: 90px;
   padding: 15px;
   display: flex;
@@ -83,15 +95,31 @@ const EnterButton = styled.div<{ backgroundColor: string }>`
   }
 `;
 
-function Enter({ color }: EnterProps) {
+function Enter({
+  color,
+  width,
+  top,
+  enterPromptWidth,
+  enterButtonWidth,
+  enterMicWidth,
+  enterPromptPadding,
+}: EnterProps) {
   return (
     <>
-      <EnterBox>
-        <EnterMic>
+      <EnterBox enterBoxWidth={width} enterBoxTop={top}>
+        <EnterMic enterMicWidth={enterMicWidth}>
           <img src={mic}></img>
         </EnterMic>
-        <EnterPrompt type="text" placeholder="Enter Your Prompt"></EnterPrompt>
-        <EnterButton backgroundColor={color}>
+        <EnterPrompt
+          enterPromptWidth={enterPromptWidth}
+          enterPromptPadding={enterPromptPadding}
+          type="text"
+          placeholder="Enter Your Prompt"
+        ></EnterPrompt>
+        <EnterButton
+          backgroundColor={color}
+          enterButtonWidth={enterButtonWidth}
+        >
           <Link to="/generating">
             <span>Generate</span>
           </Link>
