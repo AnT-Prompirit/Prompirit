@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import bg from "../img/Home.png";
 import Background from "../Components/BackGround";
