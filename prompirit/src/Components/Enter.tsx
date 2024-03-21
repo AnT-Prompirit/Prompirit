@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import mic from "../img/mic.png";
 import { Link } from "react-router-dom";
+import Popup from "../Components/Popup";
+import { useState } from "react";
 
 type EnterProps = {
   color: string;
@@ -23,15 +25,6 @@ const EnterBox = styled.div<{ enterBoxWidth: number; enterBoxTop: number }>`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  @media (min-width: 0px) {
-    font-size: 10px;
-  }
-  @media (min-width: 500px) {
-    font-size: 8px;
-  }
-  @media (min-width: 1024px) {
-    font-size: 16px;
-  }
 `;
 
 const EnterPrompt = styled.input<{
@@ -104,10 +97,16 @@ function Enter({
   enterMicWidth,
   enterPromptPadding,
 }: EnterProps) {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
     <>
       <EnterBox enterBoxWidth={width} enterBoxTop={top}>
-        <EnterMic enterMicWidth={enterMicWidth}>
+        <EnterMic onClick={togglePopup} enterMicWidth={enterMicWidth}>
           <img src={mic}></img>
         </EnterMic>
         <EnterPrompt
@@ -125,6 +124,7 @@ function Enter({
           </Link>
         </EnterButton>
       </EnterBox>
+      {showPopup && <Popup onClose={togglePopup} />}
     </>
   );
 }
