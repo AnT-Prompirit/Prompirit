@@ -12,12 +12,10 @@
 
 
 ## 💗 Elevator Speech
-“이미지 GenAI 프롬프트 최적화를 제공하는 Prompirit은 사용자 발화 및 사용자 감정의 키워드를 분석하는 Multi-modal AI 프롬프트 엔지니어링 도구를 사용해 text prompt를 생성한 후, 이를 GenAI의 input 프롬프트로 활용하여 사용자의 감정을 보다 정교하게 반영한 이미지 결과물을 생성하도록 한다.”
+“이미지 GenAI 프롬프트 최적화를 제공하는 Prompirit은 **사용자의 감정을 ﻿핵심 요소로 고려**하여 AI 생성 이미지를 개선하는 자동 프롬프트 엔지니어링 툴이다.”
 
-
-## 
-[References]
-
+##
+#### References
 [1] Yunlong Wang, Shuyuan Shen, and Brian Y. Lim. 2023. RePrompt: Automatic Prompt Editing to Refine AI-Generative Art Towards Precise Expressions. In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ’23), April 23–28, 2023, Hamburg, Germany. ACM, New York, NY, USA, 29 pages. https://doi.org/10.1145/3544548.3581402
 [2] Jonas Oppenlaender. 2022. Prompt Engineering for Text-Based Generative Art. arXiv 1, 1. Retrieved from http://arxiv.org/abs/2204.13988
 [3] Ankita Gandhi, Kinjal Adhvaryu, Soujanya Poria, Erik Cambria, Amir Hussain, Multimodal sentiment analysis: A systematic review of history, datasets, multimodal fusion methods, applications, challenges and future directions, Information Fusion, Volume 91, 2023, Pages 424-444, ISSN 1566-2535, https://doi.org/10.1016/j.inffus.2022.09.025.
