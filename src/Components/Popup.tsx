@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import micactivate from "../img/micactivate.gif";
 import popup from "../img/Popup.png";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 interface PopupProps {
   onClose: () => void;
@@ -74,11 +74,20 @@ function Popup({ onClose }: PopupProps) {
 
   const navigate = useNavigate();
 
+  const { user } = useParams();
+  let generatingPath: string;
+
+  if (user) {
+    generatingPath = `/Prompirit/user/${user}/generating`;
+  } else {
+    generatingPath = "/Prompirit/generating";
+  }
+
   // 버튼 클릭 이벤트 핸들러
   const handleButtonClick = () => {
     // 1700ms 후에 "/generate"로 이동
     setTimeout(() => {
-      navigate("/Prompirit/generating");
+      navigate(generatingPath);
     }, 900);
   };
 
@@ -86,6 +95,7 @@ function Popup({ onClose }: PopupProps) {
     const generation = localStorage.getItem("generation");
     const newGeneration = generation ? parseInt(generation) + 1 : 1;
     localStorage.setItem("generation", newGeneration.toString());
+    localStorage.removeItem("promptText");
   };
 
   return (
