@@ -34,7 +34,7 @@ const ImgLine = styled.div`
   justify-content: space-between;
 `;
 
-const GenImg = styled.div`
+export const GenImg = styled.div`
   border-radius: 15%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

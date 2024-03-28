@@ -5,6 +5,15 @@ import bg from "../img/Generated.png";
 import { useEffect, useState, useRef } from "react";
 import { lightTheme } from "../theme";
 import { Link } from "react-router-dom";
+import { GenImg } from "../Components/FourImages";
+import img1_1 from "../img/img0_p.jpg";
+import img2_1 from "../img/img2_p.jpg";
+import img3_1 from "../img/img3_p.jpg";
+import img4_1 from "../img/img20_p.jpg";
+import img5_1 from "../img/img55_p.jpg";
+import img6_1 from "../img/img143_p.jpeg";
+import img7_1 from "../img/img144_p.jpeg";
+import img8_1 from "../img/img218_p.jpg";
 
 const EnterContainer = styled.div`
   width: 100%;
@@ -54,13 +63,21 @@ const Edited = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  width: 100%;
-  height: 50%;
-  margin-top: 5%;
+  width: 75%;
+  line-height: 0;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 500;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: blueviolet;
+  > * {
+    margin-right: 1.5%;
+  }
+  > *:last-child {
+    margin-right: 0;
+  }
 `;
 
 function Generate() {
@@ -79,6 +96,21 @@ function Generate() {
     handleResize(); // 컴포넌트가 마운트될 때 한번 실행
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const generation = localStorage.getItem("generation");
+  const imgnum = generation ? parseInt(generation) % 8 : 9;
+
+  const images = [
+    img1_1,
+    img2_1,
+    img3_1,
+    img4_1,
+    img5_1,
+    img6_1,
+    img7_1,
+    img8_1,
+    img8_1,
+  ];
 
   return (
     <>
@@ -100,7 +132,14 @@ function Generate() {
             <Edited>
               <p>Edited Prompt will be shown Here.</p>
             </Edited>
-            {/* <ImgContainer></ImgContainer> */}
+            <ImgContainer>
+              <GenImg>
+                <img src={images[imgnum]}></img>
+              </GenImg>
+              <GenImg>
+                <img src={images[imgnum]}></img>
+              </GenImg>
+            </ImgContainer>
           </EnterContainer>
         </>
       </Background>

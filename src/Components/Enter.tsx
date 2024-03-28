@@ -103,6 +103,12 @@ function Enter({
     setShowPopup(!showPopup);
   };
 
+  const increaseGeneration = () => {
+    const generation = localStorage.getItem("generation");
+    const newGeneration = generation ? parseInt(generation) + 1 : 1;
+    localStorage.setItem("generation", newGeneration.toString());
+  };
+
   return (
     <>
       <EnterBox enterBoxWidth={width} enterBoxTop={top}>
@@ -118,6 +124,7 @@ function Enter({
         <EnterButton
           backgroundColor={color}
           enterButtonWidth={enterButtonWidth}
+          onClick={increaseGeneration}
         >
           <Link to="/Prompirit/generating">
             <span>Generate</span>

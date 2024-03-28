@@ -82,6 +82,12 @@ function Popup({ onClose }: PopupProps) {
     }, 900);
   };
 
+  const increaseGeneration = () => {
+    const generation = localStorage.getItem("generation");
+    const newGeneration = generation ? parseInt(generation) + 1 : 1;
+    localStorage.setItem("generation", newGeneration.toString());
+  };
+
   return (
     <PopupBackground>
       <PopupContainer>
@@ -89,7 +95,7 @@ function Popup({ onClose }: PopupProps) {
         <PopupBtn onClick={onClose}></PopupBtn>
         {micActivate && (
           <MicContainer onClick={toggleMic}>
-            <img src={micactivate}></img>
+            <img src={micactivate} onClick={increaseGeneration}></img>
           </MicContainer>
         )}
       </PopupContainer>
