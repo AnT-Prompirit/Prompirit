@@ -13,7 +13,18 @@ import img5_1 from "../img/img144_p.jpeg";
 import img6_1 from "../img/img202_p.jpg";
 import img7_1 from "../img/img212_p.jpeg";
 import img8_1 from "../img/img218_p.jpg";
+import img1_2 from "../img/img0_p2.jpg";
+import img2_2 from "../img/img28_p2.jpg";
+import img3_2 from "../img/img74_p.jpeg";
+import img4_2 from "../img/img138_p2.jpg";
+import img5_2 from "../img/img144_p2.jpg";
+import img6_2 from "../img/img202_p2.jpg";
+import img7_2 from "../img/img212_p.jpeg";
+import img8_2 from "../img/img218_p2.jpg";
+import img9_1 from "../img/no-image.jpg";
 import GoHome from "../Components/GoHome";
+
+type ImagePair = [string, string];
 
 const EnterContainer = styled.div`
   width: 100%;
@@ -36,6 +47,23 @@ const Edited = styled.div`
   background-color: ${(props) => props.theme.basic};
   border-radius: 30px;
   padding: 2%;
+  flex-direction: column;
+  h6 {
+    width: 100%;
+    font-weight: 900;
+    line-height: 3;
+    overflow-wrap: break-word;
+    word-break: normal;
+    @media (min-width: 500px) {
+      font-size: 11px;
+    }
+    @media (min-width: 900px) {
+      font-size: 14px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 17px;
+    }
+  }
   p {
     width: 100%;
     line-height: 1.5;
@@ -64,9 +92,11 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: space-between;
   > * {
+    flex: 1;
     margin-right: 1.5%;
   }
   > *:last-child {
+    flex: 1;
     margin-right: 0;
   }
 `;
@@ -91,27 +121,27 @@ function Generate() {
   const generation = localStorage.getItem("generation");
   const imgnum = generation ? parseInt(generation) % 8 : 9;
 
-  const images = [
-    img1_1,
-    img2_1,
-    img3_1,
-    img4_1,
-    img5_1,
-    img6_1,
-    img7_1,
-    img8_1,
-    img8_1,
+  const images: ImagePair[] = [
+    [img1_1, img1_2],
+    [img2_1, img2_2],
+    [img3_1, img3_2],
+    [img4_1, img4_2],
+    [img5_1, img5_2],
+    [img6_1, img6_2],
+    [img7_1, img7_2],
+    [img8_1, img8_2],
+    [img9_1, img9_1],
   ];
 
   const editedPrompts = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
+    "amusement, family came back vacation great time, went disney world orlando, fl see kids great time made happy wait next vacation, vacation great time, fun, enjoyment, happiness, Vivid Colors, Playful , Warm Lighting",
+    "anger, purchased new phone online last week, got, box empty, contacted company, initially refused refund money, got pretty angry, new phone online, acrimoniousness, exasperation, angriness, Angered, Disappointed, Determined",
+    "disgust, friend maria plans brunch, supposed meet 11, even call till 3, work 5, day waste, meet 11 till work day, awfulness, nauseate, blame, Warm Neutrals, Soft Pastels, Vintage Textures",
+    "sadness, family still recovered untimely passing father two years ago, siblings managing, found peace, mother different story, sudden unexpected, family recovered, sorrowfulness, disheartenedness, sorrow, Soft Pastels, Watercolor Brush Strokes, Muted Neutrals",
+    "contentment, wife made pancakes breakfast, full belly feel rather happy, wife pancakes breakfast, gratification, satiation, light heartedness, golden yellow, orange, red, brushstroke, soft, illustration, whimsical",
+    "excitement, got hired dream job apple, wait start, help design new iphones, going much fun, job apple wait start help, desire succeed, love, exhilaration, Vivid Colors, Playful , Dynamic Composition",
+    "awe, son saving 3 years bought first house, son saving years bought house, revere, awestruck, reverence, warm, lighting, soft, handwritten",
+    "fear, night walk home alone late work, nervous, work nervous, afraidness, creepiness, fearfulness, dim_lighting, high_contrast, exaggerated_shadows",
     "Edited Prompt will be shown Here.",
   ];
 
@@ -131,14 +161,15 @@ function Generate() {
               enterPromptPadding={5}
             ></Enter>
             <Edited>
+              <h6>Edited Prompt By Prompirit</h6>
               <p>{editedPrompts[imgnum]}</p>
             </Edited>
             <ImgContainer>
               <GenImg>
-                <img src={images[imgnum]}></img>
+                <img src={images[imgnum][0]}></img>
               </GenImg>
               <GenImg>
-                <img src={images[imgnum]}></img>
+                <img src={images[imgnum][1]}></img>
               </GenImg>
             </ImgContainer>
           </EnterContainer>

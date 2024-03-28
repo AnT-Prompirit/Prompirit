@@ -3,7 +3,7 @@ import mic from "../img/mic.png";
 import { Link } from "react-router-dom";
 import Popup from "../Components/Popup";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 type EnterProps = {
   color: string;
@@ -98,6 +98,15 @@ function Enter({
   enterMicWidth,
   enterPromptPadding,
 }: EnterProps) {
+  const { user } = useParams();
+  let generatingPath: string;
+
+  if (user) {
+    generatingPath = `/Prompirit/user/${user}/generating`;
+  } else {
+    generatingPath = "/Prompirit/generating";
+  }
+
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -131,7 +140,7 @@ function Enter({
       event.preventDefault();
       localStorage.setItem("promptText", promptText.toString());
       increaseGeneration();
-      navigate("/Prompirit/generating");
+      navigate(generatingPath);
     }
   };
 
@@ -155,7 +164,7 @@ function Enter({
           enterButtonWidth={enterButtonWidth}
           onClick={increaseGeneration}
         >
-          <Link to="/Prompirit/generating">
+          <Link to={generatingPath}>
             <span>Generate</span>
           </Link>
         </EnterButton>

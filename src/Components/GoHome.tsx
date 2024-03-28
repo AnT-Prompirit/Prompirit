@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ToHome = styled.div`
   position: absolute;
@@ -12,10 +12,18 @@ const ToHome = styled.div`
 
 function GoHome() {
   const navigate = useNavigate();
+  const { user } = useParams();
+  let homePath: string;
+
+  if (user) {
+    homePath = `/Prompirit/user/${user}/`;
+  } else {
+    homePath = "/Prompirit/";
+  }
 
   const handleNavigate = () => {
     localStorage.removeItem("promptText");
-    navigate("/Prompirit/");
+    navigate(homePath);
   };
 
   return <ToHome onClick={handleNavigate}></ToHome>;

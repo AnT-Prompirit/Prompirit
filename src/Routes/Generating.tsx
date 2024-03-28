@@ -4,7 +4,7 @@ import Enter from "../Components/Enter";
 import bg from "../img/Generating.png";
 import loading from "../img/loading.gif";
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { lightTheme } from "../theme";
 import GoHome from "../Components/GoHome";
 
@@ -35,12 +35,21 @@ const Loading = styled.div`
 `;
 
 function Generating() {
+  const { user } = useParams();
+  let generatePath: string;
+
+  if (user) {
+    generatePath = `/Prompirit/user/${user}/generate`;
+  } else {
+    generatePath = "/Prompirit/generate";
+  }
+
   const navigate = useNavigate(); // useNavigate 훅을 사용하여 네비게이션 함수 가져오기
 
   useEffect(() => {
     // 1500ms 후에 "/generate"로 이동
     const timer = setTimeout(() => {
-      navigate("/Prompirit/generate");
+      navigate(generatePath);
     }, 1700);
 
     // 컴포넌트가 unmount될 때 clearTimeout 호출하여 메모리 누수 방지

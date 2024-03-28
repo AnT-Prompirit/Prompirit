@@ -7,9 +7,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Prompirit" element={<Home />}></Route>
-        <Route path="/Prompirit/generate" element={<Generate />}></Route>
-        <Route path="/Prompirit/generating" element={<Generating />}></Route>
+        <Route path="/Prompirit/user/:user/generate" element={<Generate />} />
+        <Route
+          path="/Prompirit/user/:user/generating"
+          element={<Generating />}
+        />
+        <Route path="/Prompirit/user/:user" element={<Home />} />
+
+        <Route path="/Prompirit/generate" element={<Generate />} />
+        <Route path="/Prompirit/generating" element={<Generating />} />
+        <Route path="/Prompirit" element={<Home />} />
       </Routes>
     </Router>
   );
