@@ -3,6 +3,8 @@ import styled from "styled-components";
 import bg from "../img/Home.png";
 import Background from "../Components/BackGround";
 import Enter from "../Components/Enter";
+import img0_p from "../img/img0_p.jpg";
+import FourImages from "../Components/FourImages";
 
 const EnterContainer = styled.div`
   width: 100%;
@@ -10,6 +12,14 @@ const EnterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+`;
+
+const ImgContainer = styled.div`
+  width: 100%;
+  line-height: 0;
+  position: relative;
+  z-index: 500;
+  min-width: 632.8px;
 `;
 
 function Home() {
@@ -44,6 +54,24 @@ function Home() {
           ></Enter>
         </EnterContainer>
       </Background>
+      <ImgContainer style={{ height }}>
+        <FourImages
+          imgStyle="grid"
+          src1={img0_p}
+          src2={img0_p}
+          src3={img0_p}
+          src4={img0_p}
+        ></FourImages>
+      </ImgContainer>
+      <ImgContainer style={{ height }}>
+        <FourImages
+          imgStyle="line"
+          src1={img0_p}
+          src2={img0_p}
+          src3={img0_p}
+          src4={img0_p}
+        ></FourImages>
+      </ImgContainer>
     </>
   );
 }
