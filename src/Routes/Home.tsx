@@ -27,6 +27,10 @@ function Home() {
   const [height, setHeight] = useState<number>(0);
 
   useEffect(() => {
+    localStorage.removeItem("promptText");
+  }, []);
+
+  useEffect(() => {
     function handleResize() {
       if (enterContainerRef.current) {
         const enterContainerWidth = enterContainerRef.current.offsetWidth;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import mic from "../img/mic.png";
 import { Link } from "react-router-dom";
 import Popup from "../Components/Popup";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 type EnterProps = {
   color: string;
@@ -103,10 +104,35 @@ function Enter({
     setShowPopup(!showPopup);
   };
 
+  const [promptText, setPromptText] = useState<string>("");
+  useEffect(() => {
+    const storedText = localStorage.getItem("promptText");
+    if (storedText) {
+      setPromptText(storedText);
+    }
+  }, []);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPromptText(event.target.value);
+  };
+
   const increaseGeneration = () => {
     const generation = localStorage.getItem("generation");
     const newGeneration = generation ? parseInt(generation) + 1 : 1;
     localStorage.setItem("generation", newGeneration.toString());
+  };
+
+  const navigate = useNavigate();
+
+  const handleEnterKeyPress = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      localStorage.setItem("promptText", promptText.toString());
+      increaseGeneration();
+      navigate("/Prompirit/generating");
+    }
   };
 
   return (
@@ -120,6 +146,9 @@ function Enter({
           enterPromptPadding={enterPromptPadding}
           type="text"
           placeholder="Enter Your Prompt"
+          value={promptText}
+          onChange={handleInputChange}
+          onKeyDown={handleEnterKeyPress}
         ></EnterPrompt>
         <EnterButton
           backgroundColor={color}

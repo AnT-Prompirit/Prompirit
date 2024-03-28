@@ -4,7 +4,6 @@ import Enter from "../Components/Enter";
 import bg from "../img/Generated.png";
 import { useEffect, useState, useRef } from "react";
 import { lightTheme } from "../theme";
-import { Link } from "react-router-dom";
 import { GenImg } from "../Components/FourImages";
 import img1_1 from "../img/img0_p.jpg";
 import img2_1 from "../img/img2_p.jpg";
@@ -14,6 +13,7 @@ import img5_1 from "../img/img55_p.jpg";
 import img6_1 from "../img/img143_p.jpeg";
 import img7_1 from "../img/img144_p.jpeg";
 import img8_1 from "../img/img218_p.jpg";
+import GoHome from "../Components/GoHome";
 
 const EnterContainer = styled.div`
   width: 100%;
@@ -21,15 +21,6 @@ const EnterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-`;
-
-const GoHome = styled.div`
-  position: absolute;
-  width: 7%;
-  height: 7%;
-  top: 5%;
-  left: 12%;
-  z-index: 3;
 `;
 
 const Edited = styled.div`
@@ -128,9 +119,7 @@ function Generate() {
     <>
       <Background src={bg}>
         <>
-          <Link to="/Prompirit">
-            <GoHome></GoHome>
-          </Link>
+          <GoHome></GoHome>
           <EnterContainer ref={enterContainerRef} style={{ height }}>
             <Enter
               color={lightTheme.main}

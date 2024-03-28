@@ -4,17 +4,9 @@ import Enter from "../Components/Enter";
 import bg from "../img/Generating.png";
 import loading from "../img/loading.gif";
 import { useEffect, useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { lightTheme } from "../theme";
-
-const GoHome = styled.div`
-  position: absolute;
-  width: 7%;
-  height: 7%;
-  top: 5%;
-  left: 12%;
-  z-index: 3;
-`;
+import GoHome from "../Components/GoHome";
 
 const EnterContainer = styled.div`
   width: 100%;
@@ -75,9 +67,7 @@ function Generating() {
     <>
       <Background src={bg}>
         <>
-          <Link to="/Prompirit">
-            <GoHome></GoHome>
-          </Link>
+          <GoHome></GoHome>
           <EnterContainer ref={enterContainerRef} style={{ height }}>
             <Enter
               color={lightTheme.main}
