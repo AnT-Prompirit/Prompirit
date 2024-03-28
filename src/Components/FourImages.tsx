@@ -35,14 +35,14 @@ const ImgLine = styled.div`
 `;
 
 export const GenImg = styled.div`
-  border-radius: 15%;
+  border-radius: 10%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   img {
     width: 100%;
     object-fit: cover;
     height: 100%;
-    border-radius: 15%;
+    border-radius: 10%;
   }
 `;
 
