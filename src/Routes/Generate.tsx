@@ -112,6 +112,18 @@ function Generate() {
     img8_1,
   ];
 
+  const editedPrompts = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "Edited Prompt will be shown Here.",
+  ];
+
   return (
     <>
       <Background src={bg}>
@@ -130,7 +142,7 @@ function Generate() {
               enterPromptPadding={5}
             ></Enter>
             <Edited>
-              <p>Edited Prompt will be shown Here.</p>
+              <p>{editedPrompts[imgnum]}</p>
             </Edited>
             <ImgContainer>
               <GenImg>
