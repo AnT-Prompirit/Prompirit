@@ -102,9 +102,9 @@ function Enter({
   let generatingPath: string;
 
   if (user) {
-    generatingPath = `/Prompirit/user/${user}/generating`;
+    generatingPath = `/user/${user}/generating`;
   } else {
-    generatingPath = "/Prompirit/generating";
+    generatingPath = "/generating";
   }
 
   const [showPopup, setShowPopup] = useState(false);

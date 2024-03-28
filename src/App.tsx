@@ -5,18 +5,15 @@ import Generating from "./Routes/Generating";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/Prompirit/user/:user/generate" element={<Generate />} />
-        <Route
-          path="/Prompirit/user/:user/generating"
-          element={<Generating />}
-        />
-        <Route path="/Prompirit/user/:user" element={<Home />} />
+        <Route path="/user/:user/generate" element={<Generate />} />
+        <Route path="/user/:user/generating" element={<Generating />} />
+        <Route path="/user/:user" element={<Home />} />
 
-        <Route path="/Prompirit/generate" element={<Generate />} />
-        <Route path="/Prompirit/generating" element={<Generating />} />
-        <Route path="/Prompirit" element={<Home />} />
+        <Route path="/generate" element={<Generate />} />
+        <Route path="/generating" element={<Generating />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </Router>
   );

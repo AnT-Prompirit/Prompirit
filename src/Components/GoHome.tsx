@@ -16,9 +16,9 @@ function GoHome() {
   let homePath: string;
 
   if (user) {
-    homePath = `/Prompirit/user/${user}/`;
+    homePath = `/user/${user}/`;
   } else {
-    homePath = "/Prompirit/";
+    homePath = "/";
   }
 
   const handleNavigate = () => {

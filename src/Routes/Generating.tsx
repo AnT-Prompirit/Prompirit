@@ -39,9 +39,9 @@ function Generating() {
   let generatePath: string;
 
   if (user) {
-    generatePath = `/Prompirit/user/${user}/generate`;
+    generatePath = `/user/${user}/generate`;
   } else {
-    generatePath = "/Prompirit/generate";
+    generatePath = "/generate";
   }
 
   const navigate = useNavigate(); // useNavigate 훅을 사용하여 네비게이션 함수 가져오기

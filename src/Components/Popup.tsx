@@ -78,9 +78,9 @@ function Popup({ onClose }: PopupProps) {
   let generatingPath: string;
 
   if (user) {
-    generatingPath = `/Prompirit/user/${user}/generating`;
+    generatingPath = `/user/${user}/generating`;
   } else {
-    generatingPath = "/Prompirit/generating";
+    generatingPath = "/generating";
   }
 
   // 버튼 클릭 이벤트 핸들러
