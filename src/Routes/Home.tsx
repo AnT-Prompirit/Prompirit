@@ -3,7 +3,14 @@ import styled from "styled-components";
 import bg from "../img/Home.png";
 import Background from "../Components/BackGround";
 import Enter from "../Components/Enter";
-import img0_p from "../img/img0_p.jpg";
+import img1 from "../img/img_1.jpg";
+import img2 from "../img/img_2.jpg";
+import img3 from "../img/img_3.jpeg";
+import img4 from "../img/img_4.jpg";
+import img5 from "../img/img_5.jpg";
+import img6 from "../img/img_6.jpg";
+import img7 from "../img/img_7.jpeg";
+import img8 from "../img/img_8.jpeg";
 import FourImages from "../Components/FourImages";
 
 const EnterContainer = styled.div`
@@ -61,19 +68,19 @@ function Home() {
       <ImgContainer style={{ height }}>
         <FourImages
           imgStyle="grid"
-          src1={img0_p}
-          src2={img0_p}
-          src3={img0_p}
-          src4={img0_p}
+          src1={img1}
+          src2={img2}
+          src3={img3}
+          src4={img4}
         ></FourImages>
       </ImgContainer>
       <ImgContainer style={{ height }}>
         <FourImages
           imgStyle="line"
-          src1={img0_p}
-          src2={img0_p}
-          src3={img0_p}
-          src4={img0_p}
+          src1={img5}
+          src2={img6}
+          src3={img7}
+          src4={img8}
         ></FourImages>
       </ImgContainer>
     </>

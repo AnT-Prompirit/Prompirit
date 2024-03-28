@@ -52,6 +52,7 @@ const BoxImg = styled(GenImg)<{ gridArea: string }>`
 
 const LineImg = styled(GenImg)`
   padding: 1.5%;
+  flex: 1;
 `;
 
 function FourImages({ src1, src2, src3, src4, imgStyle }: FourImagesProps) {

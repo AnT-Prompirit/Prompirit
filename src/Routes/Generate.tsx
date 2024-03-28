@@ -6,12 +6,12 @@ import { useEffect, useState, useRef } from "react";
 import { lightTheme } from "../theme";
 import { GenImg } from "../Components/FourImages";
 import img1_1 from "../img/img0_p.jpg";
-import img2_1 from "../img/img2_p.jpg";
-import img3_1 from "../img/img3_p.jpg";
-import img4_1 from "../img/img20_p.jpg";
-import img5_1 from "../img/img55_p.jpg";
-import img6_1 from "../img/img143_p.jpeg";
-import img7_1 from "../img/img144_p.jpeg";
+import img2_1 from "../img/img28_p.jpg";
+import img3_1 from "../img/img74_p.jpeg";
+import img4_1 from "../img/img138_p.jpeg";
+import img5_1 from "../img/img144_p.jpeg";
+import img6_1 from "../img/img202_p.jpg";
+import img7_1 from "../img/img212_p.jpeg";
 import img8_1 from "../img/img218_p.jpg";
 import GoHome from "../Components/GoHome";
 
