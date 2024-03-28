@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Prompirit/static/js/main.66ef1121.js",
+    "main.js": "/Prompirit/static/js/main.b3e8e063.js",
     "static/media/micactivate.gif": "/Prompirit/static/media/micactivate.745eb53178a319d862c5.gif",
     "static/media/Home.png": "/Prompirit/static/media/Home.c9ef28ce750f2adac0fa.png",
     "static/media/loading.gif": "/Prompirit/static/media/loading.68f8730ebec34adeb9f5.gif",
@@ -32,9 +32,9 @@
     "static/media/img_3.jpeg": "/Prompirit/static/media/img_3.c14c8cbbc24de6133b27.jpeg",
     "static/media/img138_p.jpeg": "/Prompirit/static/media/img138_p.7f9ca16b786ddd4cd634.jpeg",
     "index.html": "/Prompirit/index.html",
-    "main.66ef1121.js.map": "/Prompirit/static/js/main.66ef1121.js.map"
+    "main.b3e8e063.js.map": "/Prompirit/static/js/main.b3e8e063.js.map"
   },
   "entrypoints": [
-    "static/js/main.66ef1121.js"
+    "static/js/main.b3e8e063.js"
   ]
 }
