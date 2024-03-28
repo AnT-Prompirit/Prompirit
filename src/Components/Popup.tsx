@@ -78,7 +78,7 @@ function Popup({ onClose }: PopupProps) {
   let generatingPath: string;
 
   if (user) {
-    generatingPath = `/user/${user}/generating`;
+    generatingPath = `/generating/${user}`;
   } else {
     generatingPath = "/generating";
   }

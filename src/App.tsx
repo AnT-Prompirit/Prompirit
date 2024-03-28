@@ -5,14 +5,13 @@ import Generating from "./Routes/Generating";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Routes>
-        <Route path="/user/:user/generate" element={<Generate />} />
-        <Route path="/user/:user/generating" element={<Generating />} />
-        <Route path="/user/:user" element={<Home />} />
-
+        <Route path="/:user" element={<Home />} />
         <Route path="/generate" element={<Generate />} />
+        <Route path="/generate/:user" element={<Generate />} />
         <Route path="/generating" element={<Generating />} />
+        <Route path="/generating/:user" element={<Generating />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>

@@ -10,6 +10,7 @@
     "@types/node": "^16.18.91",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
+    "firebase": "^10.9.0",
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://ant-prompirit.github.io/Prompirit/"
+  "homepage": "https://prompirit.web.app/"
 }

@@ -16,7 +16,7 @@ function GoHome() {
   let homePath: string;
 
   if (user) {
-    homePath = `/user/${user}/`;
+    homePath = `/${user}`;
   } else {
     homePath = "/";
   }

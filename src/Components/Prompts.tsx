@@ -69,7 +69,7 @@ function Prompts(userNumber: number) {
       editedPrompts = [
         "disgust, friend maria plans brunch, supposed meet 11, even call till 3, work 5, day waste, meet 11 till work day, awfulness, nauseate, blame, Warm Neutrals, Soft Pastels, Vintage Textures",
         "contentment, wife made pancakes breakfast, full belly feel rather happy, wife pancakes breakfast, gratification, satiation, light heartedness, golden yellow, orange, red, brushstroke, soft, illustration, whimsical",
-        "awe, son saving 3 years bought first house, son saving years bought house, revere, awestruck, reverence, warm, lighting, soft, handwritten",
+        "excitement, got hired dream job apple, wait start, help design new iphones, going much fun, job apple wait start help, desire succeed, love, exhilaration, Vivid Colors, Playful , Dynamic Composition",
         "fear, night walk home alone late work, nervous, work nervous, afraidness, creepiness, fearfulness, dim_lighting, high_contrast, exaggerated_shadows",
         "Edited Prompt will be shown Here.",
       ];
@@ -79,7 +79,7 @@ function Prompts(userNumber: number) {
         "amusement, family came back vacation great time, went disney world orlando, fl see kids great time made happy wait next vacation, vacation great time, fun, enjoyment, happiness, Vivid Colors, Playful , Warm Lighting",
         "sadness, family still recovered untimely passing father two years ago, siblings managing, found peace, mother different story, sudden unexpected, family recovered, sorrowfulness, disheartenedness, sorrow, Soft Pastels, Watercolor Brush Strokes, Muted Neutrals",
         "awe, son saving 3 years bought first house, son saving years bought house, revere, awestruck, reverence, warm, lighting, soft, handwritten",
-        "fear, night walk home alone late work, nervous, work nervous, afraidness, creepiness, fearfulness, dim_lighting, high_contrast, exaggerated_shadows",
+        "anger, purchased new phone online last week, got, box empty, contacted company, initially refused refund money, got pretty angry, new phone online, acrimoniousness, exasperation, angriness, Angered, Disappointed, Determined",
         "Edited Prompt will be shown Here.",
       ];
       break;

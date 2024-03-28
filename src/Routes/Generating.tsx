@@ -39,7 +39,7 @@ function Generating() {
   let generatePath: string;
 
   if (user) {
-    generatePath = `/user/${user}/generate`;
+    generatePath = `/generate/${user}`;
   } else {
     generatePath = "/generate";
   }

@@ -89,7 +89,7 @@ function Images(userNumber: number) {
       images = [
         [img3_1, img3_2],
         [img5_1, img5_2],
-        [img7_1, img7_2],
+        [img6_1, img6_2],
         [img8_1, img8_2],
         [img9_1, img9_1],
       ];
@@ -99,7 +99,7 @@ function Images(userNumber: number) {
         [img1_1, img1_2],
         [img4_1, img4_2],
         [img7_1, img7_2],
-        [img8_1, img8_2],
+        [img2_1, img2_2],
         [img9_1, img9_1],
       ];
       break;
