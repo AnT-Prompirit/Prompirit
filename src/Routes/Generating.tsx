@@ -77,7 +77,10 @@ function Generating() {
       <Background src={bg}>
         <>
           <GoHome></GoHome>
-          <EnterContainer ref={enterContainerRef} style={{ height }}>
+          <EnterContainer
+            ref={enterContainerRef}
+            style={{ height, pointerEvents: "none" }}
+          >
             <Enter
               color={lightTheme.main}
               width={75}

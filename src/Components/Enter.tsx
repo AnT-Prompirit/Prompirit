@@ -75,6 +75,7 @@ const EnterButton = styled.div<{
   justify-content: center;
   text-align: center;
   background-color: ${(props) => props.backgroundColor};
+  cursor: pointer;
   span {
     color: white;
     @media (min-width: 500px) {
@@ -129,6 +130,7 @@ function Enter({
     const generation = localStorage.getItem("generation");
     const newGeneration = generation ? parseInt(generation) + 1 : 1;
     localStorage.setItem("generation", newGeneration.toString());
+    navigate(generatingPath);
   };
 
   const navigate = useNavigate();
@@ -164,9 +166,7 @@ function Enter({
           enterButtonWidth={enterButtonWidth}
           onClick={increaseGeneration}
         >
-          <Link to={generatingPath}>
-            <span>Generate</span>
-          </Link>
+          <span>Generate</span>
         </EnterButton>
       </EnterBox>
       {showPopup && <Popup onClose={togglePopup} />}
