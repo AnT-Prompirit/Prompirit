@@ -3,9 +3,9 @@
 #### 23-2, 24-1 이화여자대학교 캡스톤디자인 🎨 18팀 뽀로로에디
 이름 | 역할
 ------------- | -------------
-김한나 Hannah Kim[(@Gamddalki)](https://github.com/gamddalki) | 팀장, 텍스트 감정 분석, 감정 라벨 추가, 통계
-이현 Hyun Lee[(@hyunini0316)](https://github.com/hyuni0316) | 스타일 키워드, 최종 평가지표 분석
-방선유 Sunyu Bang[(@syou-b)](https://github.com/syou-b) | 사전 텍스트 가공, 스타일 키워드, 이미지 생성, 통계
+김한나 Hannah Kim [(@Gamddalki)](https://github.com/gamddalki) | 팀장, 텍스트 감정 분석, 감정 라벨 추가, 통계
+이현 Hyun Lee [(@hyunini0316)](https://github.com/hyuni0316) | 스타일 키워드, 최종 평가지표 분석
+방선유 Sunyu Bang [(@syou-b)](https://github.com/syou-b) | 사전 텍스트 가공, 스타일 키워드, 이미지 생성, 통계
 
 ## 💻 Tech
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white"> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=OpenCV&logoColor=white"> <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=white"> <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">   ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=fff)
